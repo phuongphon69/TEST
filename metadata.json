@@ -1,0 +1,6 @@
+{
+  "name": "Hệ thống Quản lý Nghiệp vụ Rà phá Bom mìn (QLRPBM)",
+  "description": "Ứng dụng quản lý nội bộ văn bản, dự án, nhân sự, trang thiết bị rà phá bom mìn vật nổ tích hợp trợ lý AI tra cứu pháp lý",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,266 @@
+import { AppraisalNotice, QuarterlyReport } from '../types';
+
+export const INITIAL_APPRAISAL_NOTICES: AppraisalNotice[] = [
+  {
+    id: 'tbtd-01',
+    noticeCode: 'TB-TD-2026-001',
+    noticeNumber: '158',
+    codeSymbol: '158/TB-TĐ',
+    issueDate: '2026-03-15',
+    receiveDate: '2026-03-18',
+    appraisalAgency: 'Cục Báo cáo - Bộ Tham mưu / Binh chủng Công binh',
+    leadUnit: 'Phòng Thẩm định & Giám sát Kỹ thuật RPBM',
+    signerName: 'Đại tá Trần Minh Đức',
+    signerTitle: 'Trưởng phòng Thẩm định',
+    appraisalType: 'pakt_vado_du_toan',
+    appraisalTurn: 1,
+    contentSummary: 'Thông báo kết quả thẩm định Phương án kỹ thuật thi công và Dự toán dự án Rà phá bom mìn, vật nổ phục vụ xây dựng tuyến đường tuần tra biên giới tỉnh Quảng Trị.',
+    conclusion: 'du_dieukien_pheduyet',
+    effectiveStatus: 'dang_hieu_luc',
+    effectiveDate: '2026-03-15',
+    proposalDocCode: 'TTr-12/TTr-TĐ93',
+    approvalDocCode: 'QĐ-88/QĐ-BTL',
+    noticeFileUrl: 'https://drive.google.com/file/d/sample-scan-tbtd158/view',
+    appendixFileUrl: 'https://drive.google.com/file/d/sample-appendix-tbtd158/view',
+    driveFolderUrl: 'https://drive.google.com/drive/folders/sample-tbtd158',
+    notes: 'Đã thẩm định hoàn tất, đủ điều kiện phê duyệt triển khai thi công.',
+    
+    // Project linkage
+    projectId: 'prj-01', // Dự án Đường tuần tra biên giới Quảng Trị
+    isCurrentActiveNotice: true,
+
+    // Numbers
+    totalProjectAreaHa: 120.5,
+    landAreaHa: 110.0,
+    waterAreaHa: 10.5,
+    approvedClearanceAreaHa: 120.5,
+    approvedSurveyAreaHa: 5.0,
+    approvedConstructionAreaHa: 120.5,
+    approvedSupervisionAreaHa: 120.5,
+    coordinatesCenter: '16°45\'12"N, 106°58\'30"E',
+
+    // Budget
+    submittedBudgetValueVnd: 15200000000,
+    afterAppraisalBudgetValueVnd: 14850000000,
+    approvedBudgetValueVnd: 14850000000,
+    landBudgetValueVnd: 13500000000,
+    waterBudgetValueVnd: 1350000000,
+    surveyAndPaktBudgetValueVnd: 450000000,
+    constructionBudgetValueVnd: 13800000000,
+    supervisionBudgetValueVnd: 600000000,
+    incurredValueVnd: 0,
+    adjustedDecreaseValueVnd: 350000000,
+    adjustedIncreaseValueVnd: 0,
+    totalAfterAdjustVnd: 14850000000,
+
+    // Time
+    startDate: '2026-04-01',
+    endDate: '2026-11-30',
+    totalDays: 243,
+    surveyDays: 15,
+    constructionDays: 210,
+    supervisionDays: 243,
+
+    requirements: [
+      {
+        id: 'req-01',
+        content: 'Bổ sung sơ đồ mặt bằng các khu vực nghi ngờ phát sinh bom chùm.',
+        responsibleUnit: 'Ban Kỹ thuật - Tiểu đoàn 93',
+        assignedPerson: 'Đại úy Nguyễn Văn Tâm',
+        deadline: '2026-03-25',
+        actualCompletionDate: '2026-03-24',
+        completionResult: 'Đã hoàn thiện đính kèm phụ lục bản đồ 02.',
+        isCompleted: true
+      }
+    ],
+
+    status: 'da_hoan_thanh',
+    isConfirmedByAuthority: true,
+    confirmedBy: 'Nguyễn Bách Khoa',
+    confirmedAt: '2026-03-18 10:30'
+  },
+  {
+    id: 'tbtd-02',
+    noticeCode: 'TB-TD-2026-002',
+    noticeNumber: '204',
+    codeSymbol: '204/TB-TĐ',
+    issueDate: '2026-05-10',
+    receiveDate: '2026-05-12',
+    appraisalAgency: 'Bộ Tư lệnh Quân khu 4',
+    leadUnit: 'Phòng Công binh QK4',
+    signerName: 'Thượng tá Lê Hoài Nam',
+    signerTitle: 'Phó Trưởng phòng Công binh',
+    appraisalType: 'dtks',
+    appraisalTurn: 1,
+    contentSummary: 'Thông báo kết quả thẩm định Hồ sơ điều tra, khảo sát RPBM khu tái định cư dự án Hồ chứa nước Tà Rục, tỉnh Khánh Hòa.',
+    conclusion: 'du_dieukien_trienkhai',
+    effectiveStatus: 'dang_hieu_luc',
+    effectiveDate: '2026-05-10',
+    proposalDocCode: 'TTr-45/TTr-TĐ93',
+    approvalDocCode: 'QĐ-312/QĐ-QK',
+    noticeFileUrl: 'https://drive.google.com/file/d/sample-scan-tbtd204/view',
+    driveFolderUrl: 'https://drive.google.com/drive/folders/sample-tbtd204',
+    notes: 'Chấp thuận phương án khảo sát 5% tổng diện tích mặt bằng.',
+
+    // Project linkage
+    projectId: 'prj-02',
+    isCurrentActiveNotice: true,
+
+    // Numbers
+    totalProjectAreaHa: 85.0,
+    landAreaHa: 75.0,
+    waterAreaHa: 10.0,
+    approvedClearanceAreaHa: 85.0,
+    approvedSurveyAreaHa: 4.25,
+    approvedConstructionAreaHa: 85.0,
+    approvedSupervisionAreaHa: 85.0,
+    coordinatesCenter: '12°15\'22"N, 108°55\'10"E',
+
+    // Budget
+    submittedBudgetValueVnd: 9800000000,
+    afterAppraisalBudgetValueVnd: 9500000000,
+    approvedBudgetValueVnd: 9500000000,
+    landBudgetValueVnd: 8200000000,
+    waterBudgetValueVnd: 1300000000,
+    surveyAndPaktBudgetValueVnd: 380000000,
+    constructionBudgetValueVnd: 8620000000,
+    supervisionBudgetValueVnd: 500000000,
+    incurredValueVnd: 0,
+    adjustedDecreaseValueVnd: 300000000,
+    adjustedIncreaseValueVnd: 0,
+    totalAfterAdjustVnd: 9500000000,
+
+    // Time
+    startDate: '2026-06-01',
+    endDate: '2026-12-15',
+    totalDays: 197,
+    surveyDays: 20,
+
+    requirements: [],
+    status: 'da_hoan_thanh',
+    isConfirmedByAuthority: true,
+    confirmedBy: 'Nguyễn Văn Hùng',
+    confirmedAt: '2026-05-12 14:15'
+  }
+];
+
+export const INITIAL_QUARTERLY_REPORTS: QuarterlyReport[] = [
+  {
+    id: 'qrep-01',
+    reportCode: 'BC-QUY2-2026-01',
+    reportNumber: '42/BC-TĐ',
+    reportType: 'phu_luc_3_thi_cong',
+    quarter: 2,
+    year: 2026,
+    reportDate: '2026-06-30',
+    issuingUnit: 'Tiểu đoàn 93/Binh chủng Công binh',
+    taskAuthorityLevel: 'bo_quoc_phong',
+    title: 'Phụ lục III - Kết quả thực hiện công tác thi công rà phá bom mìn, vật nổ quý II năm 2026',
+    subtitle: 'Kèm theo Báo cáo số: 42/BC-TĐ, ngày 30 tháng 06 năm 2026 của Tiểu đoàn 93/Binh chủng Công binh',
+    creatorName: 'Thiếu tá Phạm Văn Luân',
+    checkerName: 'Trung tá Lê Ngọc Minh',
+    approverName: 'Thượng tá Nguyễn Văn Hùng',
+    version: 'v1.0',
+    status: 'da_phat_hanh',
+    items: [
+      {
+        id: 'line-01',
+        stt: 1,
+        projectId: 'prj-01',
+        projectName: 'Dự án Rà phá bom mìn đường tuần tra biên giới tỉnh Quảng Trị',
+        commune: 'Hướng Phùng',
+        district: 'Hướng Hóa',
+        province: 'Quảng Trị',
+        coordinatesCenter: '16°45\'12"N, 106°58\'30"E',
+        investor: 'Ban QLDA Đường tuần tra biên giới / BQP',
+        approvedLandAreaHa: 110.0,
+        approvedWaterAreaHa: 10.5,
+        totalApprovedAreaHa: 120.5,
+        totalProjectAreaHa: 120.5,
+        approvedBudgetVnd: 14850000000,
+        periodExecutedLandAreaHa: 45.0,
+        periodExecutedWaterAreaHa: 4.5,
+        totalPeriodExecutedAreaHa: 49.5,
+        periodExecutedValueVnd: 6100000000,
+        uxoQuantityCount: 184,
+        uxoWeightKg: 245.5,
+        disposalLocation: 'Thao trường hủy nổ Hương Hóa',
+        coordinatingUnit: 'Bộ CHQS tỉnh Quảng Trị',
+        groupType: 'BO_QUOC_PHONG',
+        notes: 'Thi công vượt 5% kế hoạch quý',
+        sourceAppraisalNoticeId: 'tbtd-01'
+      },
+      {
+        id: 'line-02',
+        stt: 2,
+        projectId: 'prj-02',
+        projectName: 'Dự án RPBM khu tái định cư Hồ chứa nước Tà Rục',
+        commune: 'Cam Phước Tây',
+        district: 'Cam Lâm',
+        province: 'Khánh Hòa',
+        coordinatesCenter: '12°15\'22"N, 108°55\'10"E',
+        investor: 'Sở Nông nghiệp & PTNT tỉnh Khánh Hòa',
+        approvedLandAreaHa: 75.0,
+        approvedWaterAreaHa: 10.0,
+        totalApprovedAreaHa: 85.0,
+        totalProjectAreaHa: 85.0,
+        approvedBudgetVnd: 9500000000,
+        periodExecutedLandAreaHa: 30.0,
+        periodExecutedWaterAreaHa: 2.0,
+        totalPeriodExecutedAreaHa: 32.0,
+        periodExecutedValueVnd: 3600000000,
+        uxoQuantityCount: 92,
+        uxoWeightKg: 112.0,
+        disposalLocation: 'Bãi hủy nổ Cam Lâm',
+        coordinatingUnit: 'Bộ CHQS tỉnh Khánh Hòa',
+        groupType: 'QUAN_KHU',
+        notes: 'Tiến độ đảm bảo an toàn tuyệt đối',
+        sourceAppraisalNoticeId: 'tbtd-02'
+      }
+    ]
+  },
+  {
+    id: 'qrep-02',
+    reportCode: 'BC-QUY2-2026-02',
+    reportNumber: '43/BC-TĐ',
+    reportType: 'phu_luc_1_giam_sat',
+    quarter: 2,
+    year: 2026,
+    reportDate: '2026-06-30',
+    issuingUnit: 'Tiểu đoàn 93/Binh chủng Công binh',
+    taskAuthorityLevel: 'bo_quoc_phong',
+    title: 'Phụ lục I – Kết quả thực hiện công tác giám sát thi công rà phá bom mìn, vật nổ quý II năm 2026',
+    subtitle: 'Kèm theo Báo cáo số: 43/BC-TĐ, ngày 30 tháng 06 năm 2026 của Tiểu đoàn 93/Binh chủng Công binh',
+    creatorName: 'Thiếu tá Phạm Văn Luân',
+    checkerName: 'Trung tá Lê Ngọc Minh',
+    approverName: 'Thượng tá Nguyễn Văn Hùng',
+    version: 'v1.0',
+    status: 'da_phat_hanh',
+    items: [
+      {
+        id: 'line-03',
+        stt: 1,
+        projectId: 'prj-01',
+        projectName: 'Dự án Rà phá bom mìn đường tuần tra biên giới tỉnh Quảng Trị',
+        district: 'Hướng Hóa',
+        province: 'Quảng Trị',
+        investor: 'Ban QLDA Đường tuần tra biên giới / BQP',
+        approvedLandAreaHa: 110.0,
+        approvedWaterAreaHa: 10.5,
+        totalApprovedAreaHa: 120.5,
+        approvedBudgetVnd: 14850000000,
+        periodExecutedLandAreaHa: 45.0,
+        periodExecutedWaterAreaHa: 4.5,
+        totalPeriodExecutedAreaHa: 49.5,
+        periodExecutedValueVnd: 220000000, // Giá trị thực hiện giám sát (triệu đồng/đồng)
+        uxoQuantityCount: 184,
+        uxoWeightKg: 245.5,
+        disposalLocation: 'Thao trường hủy nổ Hướng Hóa',
+        coordinatingUnit: 'Bộ CHQS tỉnh Quảng Trị',
+        groupType: 'BO_QUOC_PHONG',
+        notes: 'Giám sát 100% diện tích đã rà phá',
+        sourceAppraisalNoticeId: 'tbtd-01'
+      }
+    ]
+  }
+];
